@@ -12,6 +12,8 @@ An action to sync values between items and organization-level (v2) project board
 
 > DO NOT hard-code your token in the Action config! This is a major security issue! Use repository secrets to store the token.
 
+Note that this action currently supports syncs on non-select fields (text, date, and number). Select support is coming, though...
+
 ### Example config
 
 The following configuration will run the sync each time a push is made to the repo:
