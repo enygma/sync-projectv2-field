@@ -15,5 +15,5 @@ jobs:
           project_id: 10068
           item_property: "created"
           org: "github"
-          sync_field: "Percent Completed"
+          sync_field: "% Completed"
           github_token: ${{ secrets.AUTOMATION_TOKEN }}
