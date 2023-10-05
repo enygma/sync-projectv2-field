@@ -1,0 +1,19 @@
+name: Test Action
+on: [push]
+
+jobs:
+  sync-field:
+    runs-on: ubuntu-latest
+    name: Run the project field sync
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Run the sync
+        id: run-sync
+        uses: ./
+        with:
+          project_id: 10068
+          item_property: "created"
+          org: "github"
+          sync_field: "Percent Completed"
+          github_token: ${{ secrets.AUTOMATION_TOKEN }}

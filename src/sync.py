@@ -31,9 +31,20 @@ if field is None:
 
 print('TYPE: %s' % field.dataType)
 
-# Now that we have the field, update the value for it
+# Commented for debugging
+# input = getattr(item, item_property)
+input = '20'
 
+# If the field is a SINGLE_SELECT, we need to find the option and provide that as the value to update to
+if field.dataType == 'SINGLE_SELECT':
+    for option in field.options:
+        print(option.name, input)
+        if option.name == input:
+            input = option
+            break
+
+# Now that we have the field, update the value for it
 items = project.get_items()
 for item in items:
     print('Item title: %s' % item.title)
-    item.update_field_value(project, field, getattr(item, item_property))
+    item.update_field_value(project, field, input)
