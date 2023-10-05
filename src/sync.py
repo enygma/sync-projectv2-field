@@ -1,7 +1,7 @@
 from github_projectv2.project import Project
 import os
 
-org = os.getenv('GITHUB_ORG')
+org = os.getenv('ORG')
 token = os.getenv('GITHUB_API_TOKEN')
 project_id = os.getenv('PROJECT_ID')
 sync_field = os.getenv('SYNC_FIELD')
