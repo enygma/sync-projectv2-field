@@ -31,9 +31,13 @@ jobs:
         id: run-sync
         uses: ./
         with:
-          project_id: 10068
+          project_id: 123456
           item_property: "created"
-          org: "github"
+          org: "myorg"
           sync_field: "Open Date"
           github_token: ${{ secrets.AUTOMATION_TOKEN }}
 ```
+
+### License
+
+The scripts and documentation in this project are released under the [MIT License](https://opensource.org/license/mit/)
