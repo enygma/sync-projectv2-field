@@ -7,6 +7,9 @@ project_id = os.getenv('PROJECT_ID')
 sync_field = os.getenv('SYNC_FIELD')
 item_property = os.getenv('ITEM_PROPERTY')
 
+print('ORG: %s' % org)
+print('SYNC_FIELD: %s' % sync_field)
+
 project = Project()
 project.get(org, project_id)
 print('Project: %s' % project.title)
