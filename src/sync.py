@@ -36,8 +36,7 @@ print('NAME: %s' % field.name)
 print('OPTIONS LENGTH: %s' % len(field.options))
 
 # Commented for debugging
-# input = getattr(item, item_property)
-input = '20'
+input = getattr(item, item_property)
 
 # If the field is a SINGLE_SELECT, we need to find the option and provide that as the value to update to
 if field.dataType == 'SINGLE_SELECT':
