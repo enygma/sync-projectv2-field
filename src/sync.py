@@ -20,9 +20,10 @@ print('Project: %s' % project.title)
 
 # Make sure the project has the field we want
 field = None
-for field in project.fields:
-    if field.name == sync_field:
-        print(field.name, field.id)
+for f in project.fields:
+    if f.name == sync_field:
+        print(f.name, f.id)
+        field = f
         break
 
 if field is None:
@@ -41,6 +42,7 @@ if field.dataType == 'SINGLE_SELECT':
     for option in field.options:
         print(option.name, input)
         if option.name == input:
+            print('found: %s %s' % (option.id, option.name))
             input = option
             break
 
