@@ -12,6 +12,10 @@ print('SYNC_FIELD: %s' % sync_field)
 
 project = Project()
 project.get(org, project_id)
+if project is None:
+    print('Project not found')
+    exit()
+
 print('Project: %s' % project.title)
 
 # Make sure the project has the field we want

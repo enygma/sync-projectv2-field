@@ -35,7 +35,7 @@ runs:
     - name: Pass in inputs
       run: |
         echo "PROJECT_ID=${{ inputs.project_id }}" >> $GITHUB_ENV
-        echo "ITEM_PROPERTY=${{ inputs.ITEM_PROPERTY }}" >> $GITHUB_ENV
+        echo "ITEM_PROPERTY=${{ inputs.item_property }}" >> $GITHUB_ENV
         echo "ORG=${{ inputs.org }}" >> $GITHUB_ENV
         echo "SYNC_FIELD=${{ inputs.sync_field }}" >> $GITHUB_ENV
         echo "GITHUB_API_TOKEN=${{ inputs.github_token }}" >> $GITHUB_ENV
