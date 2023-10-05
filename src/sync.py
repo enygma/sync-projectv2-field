@@ -33,7 +33,7 @@ if field is None:
 
 print('TYPE: %s' % field.dataType)
 print('NAME: %s' % field.name)
-
+print('OPTIONS LENGTH: %s' % len(field.options))
 
 # Commented for debugging
 # input = getattr(item, item_property)
