@@ -21,6 +21,7 @@ print('Project: %s' % project.title)
 # Make sure the project has the field we want
 field = None
 for f in project.fields:
+    print('%s > %s' % (sync_field, f.name))
     if f.name == sync_field:
         print(f.name, f.id)
         field = f
@@ -31,6 +32,8 @@ if field is None:
     exit()
 
 print('TYPE: %s' % field.dataType)
+print('NAME: %s' % field.name)
+
 
 # Commented for debugging
 # input = getattr(item, item_property)
