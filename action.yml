@@ -1,5 +1,5 @@
 name: "Sync ProjectV2 Field"
-description: "A GitHub Action to sync ProjectV2 field with a value from and item's properties"
+description: "A GitHub Action to sync ProjectV2 field one organization-level boards with a value from and item's properties"
 inputs:
   project_id:
     required: true
@@ -16,10 +16,6 @@ inputs:
   github_token:
     required: true
     description: "GitHub token with project write access"
-outputs:
-  number_updated:
-    description: "Number of items updated"
-    value: ${{ steps.sync.outputs.number_updated }}
 runs:
   using: 'composite'
   steps:

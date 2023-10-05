@@ -17,6 +17,3 @@ jobs:
           org: "github"
           sync_field: "Open Date"
           github_token: ${{ secrets.AUTOMATION_TOKEN }}
-      - name: Print the number of items updated
-        run: |
-          echo "Number of items updated: ${{ steps.run-sync.outputs.number_updated }}"
