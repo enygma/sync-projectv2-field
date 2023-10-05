@@ -1,0 +1,22 @@
+name: Test Action
+on: [push]
+
+jobs:
+  sync-field:
+    runs-on: ubuntu-latest
+    name: Run the project field sync
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Run the sync
+        id: run-sync
+        uses: ./
+        with:
+          project_id: 10068
+          item_property: "created"
+          org: "github"
+          sync_field: "Open Date"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Print the number of items updated
+        run: |
+          echo "Number of items updated: ${{ steps.run-sync.outputs.number_updated }}"
