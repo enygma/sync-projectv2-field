@@ -37,6 +37,7 @@ input = '20'
 
 # If the field is a SINGLE_SELECT, we need to find the option and provide that as the value to update to
 if field.dataType == 'SINGLE_SELECT':
+    print('is select')
     for option in field.options:
         print(option.name, input)
         if option.name == input:
